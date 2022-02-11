@@ -1,7 +1,8 @@
-const test = () => {
-    return ( <div>
-        <h1>H</h1>
-    </div> );
+const Login = () => {
+    return ( 
+        <div>
+            <h1>Login</h1>
+        </div> );
 }
  
-export default test;
+export default Login;

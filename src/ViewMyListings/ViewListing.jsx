@@ -1,7 +1,10 @@
-const test = () => {
+import React, {useState} from "react";
+import {Form, FormGroup, Label, Input, Button} from "reactstrap";
+
+const ViewListing = () => {
     return ( <div>
-        <h2>h</h2>
+        
     </div> );
 }
  
-export default test;
+export default ViewListing;
