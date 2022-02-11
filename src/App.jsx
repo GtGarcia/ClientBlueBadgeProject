@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div>
-      <p>hi</p>
+      <p></p>
       <Router>
         <NavBar updateLocalStorage={updateLocalStorage}/>
       </Router>
