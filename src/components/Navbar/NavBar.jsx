@@ -13,6 +13,10 @@ import ViewMyListings from "../ViewMyListings/ViewListing"
 import MainPage from '../MainPage/MainPage';
 import Register from '../Register/Register';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f43705a3c8ff9432967295e78c446a6bc00f116a
 const Navbar = (props) => {
     return (
         <div>
