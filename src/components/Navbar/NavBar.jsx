@@ -4,13 +4,14 @@ import {
     Routes
 } from 'react-router-dom';
 
+
 import CreateListing from '../CreateListing/CreateListing'
 import Login from '../Login/Login'
-import Signup from "../Signup/Signup"
 import AllListings from "../AllListings/AllListings"
 import UpdateListing from '../UpdateListing/UpdateListing';
 import ViewMyListings from "../ViewMyListings/ViewListing"
 import MainPage from '../MainPage/MainPage';
+import Register from '../Register/Register';
 
 const Navbar = () => {
     return (
@@ -20,7 +21,7 @@ const Navbar = () => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/Login">Login</Link></li>
                     {/* <li><Link to="/Navbar">Navbar</Link></li> */}
-                    <li><Link to="/Signup">Signup</Link></li>
+                    <li><Link to="/Register">Register</Link></li>
                     <li><Link to="/ViewMyListings">View My Listings</Link></li>
 
                 </ul>
@@ -30,8 +31,7 @@ const Navbar = () => {
                     <Route path='/MainPage' element={<MainPage />}></Route>
                     <Route path='/' element={<MainPage />}></Route>
                     <Route path='/Login' element={<Login />}></Route>
-                    <Route path='/Navbar' element={<Navbar />}></Route>
-                    <Route path='/Signup' element={<Signup />}></Route>
+                    <Route path='/Register' element={<Register />}></Route>
                     <Route path='/AllListings' element={<AllListings />}></Route>
                     <Route path='/UpdateListing' element={<UpdateListing />}></Route>
                     <Route path='/CreateListing' element={<CreateListing />}></Route>
