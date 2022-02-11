@@ -13,7 +13,8 @@ import ViewMyListings from "../ViewMyListings/ViewListing"
 import MainPage from '../MainPage/MainPage';
 import Register from '../Register/Register';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
     return (
         <div>
             <div>
@@ -30,8 +31,8 @@ const Navbar = () => {
                 <Routes>
                     <Route path='/MainPage' element={<MainPage />}></Route>
                     <Route path='/' element={<MainPage />}></Route>
-                    <Route path='/Login' element={<Login />}></Route>
-                    <Route path='/Register' element={<Register />}></Route>
+                    <Route path='/Login' element={<Login updateLocalStorage={props.updateLocalStorage}/>}></Route>
+                    <Route path='/Register' element={<Register updateLocalStorage={props.updateLocalStorage}/>}></Route>
                     <Route path='/AllListings' element={<AllListings />}></Route>
                     <Route path='/UpdateListing' element={<UpdateListing />}></Route>
                     <Route path='/CreateListing' element={<CreateListing />}></Route>
