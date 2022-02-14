@@ -4,7 +4,9 @@ export const EndPoints = {
         login: '/user/login'
     },
     car: {
-        create: '/car/create'
+        create: '/car/create',
+        seeAll: '/car/',
+        seeMy: '/car/:id'
     }
 }
 

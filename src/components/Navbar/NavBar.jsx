@@ -23,7 +23,7 @@ const Navbar = (props) => {
                     <li><Link to="/Login">Login</Link></li>
                     {/* <li><Link to="/Navbar">Navbar</Link></li> */}
                     <li><Link to="/Register">Register</Link></li>
-                    <li><Link to="/ViewMyListings">View My Listings</Link></li>
+                    <li><Link to="/AllListings">View All Listings</Link></li>
 
                 </ul>
             </div>
@@ -37,6 +37,7 @@ const Navbar = (props) => {
                     <Route path='/UpdateListing' element={<UpdateListing />}></Route>
                     <Route path='/CreateListing' element={<CreateListing />}></Route>
                     <Route path='/ViewMyListings' element={<ViewMyListings />}></Route>
+                    
                 </Routes>
             </div>
         </div>
