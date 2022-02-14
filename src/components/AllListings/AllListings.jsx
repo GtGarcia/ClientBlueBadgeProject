@@ -1,3 +1,17 @@
+
+const AllListings = () => {
+    return (
+    <div>
+        <h1>View All Listings</h1>
+        <div className="allListings">
+            <div>
+                
+            </div>
+        </div>
+
+    </div>
+    );
+
 import React, { Link} from "react-router-dom";
 import {Form, FormGroup, Label, Input, Button,FormText} from "reactstrap";
 import { APIURL,EndPoints } from "../endpoints";
@@ -33,6 +47,7 @@ function fetchFunction(e){
             <Link to ='/'>Go Back Home</Link>
         
     </div> );
+
 }
  
 export default AllListings;

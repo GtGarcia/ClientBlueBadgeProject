@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Form, FormGroup, Label, Input, Button} from "reactstrap";
+import { APIURL, EndPoints } from '../endpoints';
 
 const CreateListing = (props) => {
     
@@ -11,21 +12,42 @@ const CreateListing = (props) => {
     const [numberOfDoors, setNumberOfDoors] = useState();
     const [miles, setMiles] = useState();
     const [vehicleLocation, setVehicleLocation] = useState();
+    const [display, setDisplay] = useState();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    const newCar = {
+        car: { 
+            price: price,
+            condition: condition,
+            transmissionType: transmissionType,
+            color: color,
+            type: type,
+            numberOfDoors: numberOfDoors,
+            miles: miles,
+            vehicleLocation: vehicleLocation
+        }
+    }
+    console.log(newCar);
+
         console.log("submitted")
-        event.preventDefault();
-        fetch('http://localhost:3000/create', {
+        fetch(APIURL + EndPoints.car.create, {
             method: 'POST',
-            body: JSON.stringify({car: {price: price, condition: condition, transmissionType: transmissionType, color: color, type: type, numberOfDoors: numberOfDoors, miles: miles, vehicleLocation: vehicleLocation }}),
+            body: JSON.stringify(newCar),
             headers: new Headers({
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0ODQ4Nzg4LCJleHAiOjE2NDQ5MzUxODh9.VHEr7j80qbCi6XgU61BTltfQEkiZsRPe5cMz4uudi64`
+                // Authorization: `Bearer` + props.token
             })
         }).then (
-            (response) => response.json()
+            (response) => {
+                console.log("line 42")
+                return response.json()
+            }
         ) .then((data) => {
-            props.updateToken(data.sessionToken);
-        })
+            console.log(data)
+            setDisplay('Listing successfully added')
+        }) .catch((err) => console.log(err))
     }
 
     return ( 
@@ -72,10 +94,10 @@ const CreateListing = (props) => {
                     <Input onChange={(e) => setVehicleLocation(e.target.value)} type="text" id="vehicleLocation" name="vehicleLocation"/>
                 </FormGroup>
                 <br />
-                <Button type="submit" onChange={handleSubmit} id="submit"></Button>
+                <Button type="submit" onClick={handleSubmit} id="submit"></Button>
             </Form>
 
-            <p>{price} {condition} {type} {color} {transmissionType} {color} {type} {numberOfDoors} {miles} {vehicleLocation}</p>
+            <p>{display}</p>
 
         </div>
     );
