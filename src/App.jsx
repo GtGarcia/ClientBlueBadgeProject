@@ -41,7 +41,7 @@ function App() {
     <div>
       <p></p>
       <Router>
-        <NavBar updateLocalStorage={updateLocalStorage}/>
+        <NavBar token={token} updateLocalStorage={updateLocalStorage}/>
       </Router>
 
     </div>
