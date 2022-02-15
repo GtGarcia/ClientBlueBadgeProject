@@ -1,3 +1,12 @@
 .aboutUs {
     width: 40%;
 }
+
+.mostRecentSale {
+    width: 40%;
+    text-align: right;
+}
+
+.wholePage {
+    display: flex
+}
