@@ -52,7 +52,7 @@ const Register = (props) => {
 
     return ( 
         <div>
-            <Form>
+            <Form onSubmit = {handleSubmit}>
                 <FormGroup>
                     <Label for ='FirstName'>
                         First Name
@@ -155,7 +155,7 @@ const Register = (props) => {
                     />
                 </FormGroup>
 
-                    <Button type = 'submit' onClick = {handleSubmit}>SignUp</Button>
+                    <Button type = 'submit' >SignUp</Button>
 
             </Form>
         <nav>

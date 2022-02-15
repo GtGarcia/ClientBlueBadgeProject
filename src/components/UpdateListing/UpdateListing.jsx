@@ -13,6 +13,7 @@ const UpdateListing = (props) => {
     const [miles, setMiles] = useState();
     const [vehicleLocation, setVehicleLocation] = useState();
     const [display, setDisplay] = useState();
+    const [id, setId] = useState();
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,8 +30,6 @@ const UpdateListing = (props) => {
         }
     }
     console.log(newCar);
-
-    const [id, setId] = useState();
 
         console.log("submitted")
         fetch(APIURL + EndPoints.car.update + id, {
