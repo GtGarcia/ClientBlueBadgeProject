@@ -54,7 +54,7 @@ const UpdateListing = (props) => {
 
     return ( 
         <div> 
-            <h2>Update Listing:</h2>
+            <h2>Update Listing: </h2>
             <Form>
                 <FormGroup>
                     <Label htmlFor="Price">Price:</Label>
