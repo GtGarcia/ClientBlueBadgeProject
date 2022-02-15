@@ -12,6 +12,7 @@ import UpdateListing from '../UpdateListing/UpdateListing';
 import ViewMyListings from "../ViewMyListings/ViewListing"
 import MainPage from '../MainPage/MainPage';
 import Register from '../Register/Register';
+import Logout from '../Logout/Logout';
 
 const Navbar = (props) => {
     return (
@@ -23,6 +24,8 @@ const Navbar = (props) => {
                     {/* <li><Link to="/Navbar">Navbar</Link></li> */}
                     <li><Link to="/Register">Register</Link></li>
                     <li><Link to="/AllListings">View All Listings</Link></li>
+                    <li><Link to= '/ViewMyListings'>View My Listings</Link></li>
+                    <li><Link to = '/CreateListing'>Create Listing</Link></li>
 
                 </ul>
             </div>
@@ -39,6 +42,7 @@ const Navbar = (props) => {
                     
                 </Routes>
             </div>
+            <Logout clearLocalStorage={props.clearLocalStorage} />
         </div>
 
     );

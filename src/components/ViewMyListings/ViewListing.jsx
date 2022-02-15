@@ -7,10 +7,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const ViewMyListings = (props) => {
+
+        function fetchFunction(e){
+            e.preventDefault()
+            console.log(APIURL + EndPoints.car.seeMy)
+             
+            fetch(APIURL + EndPoints.car.seeMy,{
+                method: 'GET',
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${props.token}`
+                })
+            }).then(
+                (response) => {
+                    return response.json()
+                }
+            ).then((data) => {
+                console.log(data)
+            }).catch((err) => console.log(err))
+        }
+
     return ( 
     <div>
         <p>Hello from view my listings!</p>
-
+        <button type='button' onClick = {fetchFunction}>Click me</button>
 
 
         <Link to ='/'>Go Back Home</Link>

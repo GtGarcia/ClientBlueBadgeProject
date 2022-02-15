@@ -9,14 +9,14 @@ import {
 } from "reactstrap";
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from '../HomePage';
+
 import { APIURL, EndPoints } from '../endpoints';
 const Login = (props) => {
     
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    function handleSudmit(e) {
+    function handleSubmit(e) {
         e.preventDefault()
         console.log(APIURL+EndPoints.user.login)
         const reqObj = {
@@ -31,14 +31,14 @@ const Login = (props) => {
                 'Content-Type': 'application/json',
             })
         }) .then(res => res.json())
-        .then((data)=> props.updateLocalStorage(data.token))
+        .then((data)=> props.updateLocalStorage(data.sessionToken))
         .catch((err)=> console.log(err))
     }
 
     return ( 
         
 <div>
-            <Form>
+            <Form onSubmit = {handleSubmit}>
                 <FormGroup>
                     <Label for = 'Email'>
                         Email
@@ -65,7 +65,7 @@ const Login = (props) => {
                         onChange = {(e) => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Button typeof = 'submit' onClick = {handleSudmit}>
+                <Button type = 'submit' >
                     Login
                 </Button>
             </Form>

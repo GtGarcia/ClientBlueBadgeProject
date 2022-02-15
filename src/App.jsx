@@ -7,10 +7,13 @@ import './App.css';
 // } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login/Login';
-import Home from './components/HomePage';
+
 import Register from './components/Register/Register';
 import { useState, useEffect } from 'react';
 import NavBar from './components/Navbar/NavBar';
+import CarTable from './components/CarTable/CarTable';
+import CarIndex from './components/CarIndex';
+import Auth from './components/Auth';
 
 
 
@@ -36,12 +39,13 @@ function App() {
 
 
 
-
+console.log(token === localStorage.getItem('token'))
   return (
     <div>
       <p></p>
       <Router>
-        <NavBar token={token} updateLocalStorage={updateLocalStorage}/>
+        <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
+        {token === localStorage.getItem('token') ? (<CarIndex token ={token}/>) : ( <Auth updateLocalStorage = {updateLocalStorage}/>)}
       </Router>
 
     </div>
