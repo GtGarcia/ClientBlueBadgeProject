@@ -38,7 +38,7 @@ const UpdateListing = (props) => {
             body: JSON.stringify(newCar),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0ODQ4Nzg4LCJleHAiOjE2NDQ5MzUxODh9.VHEr7j80qbCi6XgU61BTltfQEkiZsRPe5cMz4uudi64`
+                Authorization: `Bearer ${props.token}`
                 // Authorization: `Bearer` + props.token
             })
         }).then (

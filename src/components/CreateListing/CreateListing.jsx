@@ -36,12 +36,11 @@ const CreateListing = (props) => {
             body: JSON.stringify(newCar),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0ODQ4Nzg4LCJleHAiOjE2NDQ5MzUxODh9.VHEr7j80qbCi6XgU61BTltfQEkiZsRPe5cMz4uudi64`
+                Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0OTM3MTQ4LCJleHAiOjE2NDUwMjM1NDh9.4JAsoMWmkr1Vlpdb0Nfpb4u8Te5BQGaCByIRI5ymqaU`
                 // Authorization: `Bearer` + props.token
             })
         }).then (
             (response) => {
-                console.log("line 42")
                 return response.json()
             }
         ) .then((data) => {

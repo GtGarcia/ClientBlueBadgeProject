@@ -39,11 +39,11 @@ function App() {
 
   return (
     <div>
-      <p></p>
+
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage}/>
       </Router>
-
+      
     </div>
  
      

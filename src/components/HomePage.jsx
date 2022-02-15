@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-
 const Home = (props) => {
     return ( 
         <div>
