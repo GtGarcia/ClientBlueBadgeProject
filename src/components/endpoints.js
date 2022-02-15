@@ -5,8 +5,9 @@ export const EndPoints = {
     },
     car: {
         create: '/car/create',
-
         update: "/car/",
+        get: "/car/",
+        
         seeAll: '/car/',
         seeMy: '/car/:id'
 

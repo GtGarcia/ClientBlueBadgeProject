@@ -41,7 +41,6 @@ const CreateListing = (props) => {
             })
         }).then (
             (response) => {
-                console.log("line 42")
                 return response.json()
             }
         ) .then((data) => {

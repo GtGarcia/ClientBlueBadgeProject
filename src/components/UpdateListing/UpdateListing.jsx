@@ -13,6 +13,7 @@ const UpdateListing = (props) => {
     const [miles, setMiles] = useState();
     const [vehicleLocation, setVehicleLocation] = useState();
     const [display, setDisplay] = useState();
+    const [id, setId] = useState();
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,8 +30,6 @@ const UpdateListing = (props) => {
         }
     }
     console.log(newCar);
-
-    const id = "3"
 
         console.log("submitted")
         fetch(APIURL + EndPoints.car.update + id, {
@@ -54,7 +53,7 @@ const UpdateListing = (props) => {
 
     return ( 
         <div> 
-            <h2>Update Listing:</h2>
+            <h2>Update Listing: </h2>
             <Form>
                 <FormGroup>
                     <Label htmlFor="Price">Price:</Label>
@@ -96,6 +95,10 @@ const UpdateListing = (props) => {
                     <Input onChange={(e) => setVehicleLocation(e.target.value)} type="text" id="vehicleLocation" name="vehicleLocation"/>
                 </FormGroup>
                 <br />
+                <FormGroup>
+                    <Label htmlFor="id">Id # of listing you want to change:</Label>
+                    <Input onChange={(e) => setId(e.target.value)} type="text" id="id" name="id"/>
+                </FormGroup>
                 <Button type="submit" onClick={handleSubmit} id="submit"></Button>
             </Form>
 

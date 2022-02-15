@@ -42,12 +42,12 @@ function App() {
 console.log(token === localStorage.getItem('token'))
   return (
     <div>
-      <p></p>
+
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
         {token === localStorage.getItem('token') ? (<CarIndex token ={token}/>) : ( <Auth updateLocalStorage = {updateLocalStorage}/>)}
       </Router>
-
+      
     </div>
  
      
