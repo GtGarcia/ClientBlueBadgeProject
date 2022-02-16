@@ -8,7 +8,7 @@ const CarTable = (props) => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
         fetchCars();
-    }, [props.refreshCarTable]);
+    }, []);
     async function fetchCars(){
 
         const reqObj = {
@@ -47,9 +47,9 @@ return (
         </thead>
         <tbody>
 
-            {cars.map((car) =>(
+            {/* {cars.map((car) =>(
                 <CarRow car = {car}/>
-            ))}
+            ))} */}
         </tbody>
     </table>
 </div>

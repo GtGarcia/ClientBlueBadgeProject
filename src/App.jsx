@@ -17,7 +17,7 @@ import Auth from './components/Auth';
 import LemonLotTitleTopScreen from "../src/assets/LemonLotTitleTopScreen.png"
 
 
-function App() {
+function App(props) {
   const [token, setToken] = useState("");
 
   const updateLocalStorage = (newToken) => {
@@ -43,7 +43,7 @@ console.log(token === localStorage.getItem('token'))
 
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
-       {/* {token === localStorage.getItem('token') ? (<CarIndex token ={token}/>) : ( <Auth updateLocalStorage = {updateLocalStorage}/>)} */}
+
       </Router>
     </div>
 

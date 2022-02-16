@@ -6,9 +6,10 @@ import { APIURL, EndPoints } from '../endpoints';
 
 let recentSale;
 
-const MainPage = () => {
+
+const MainPage = (props) => {
     useEffect(() => {
-        displayRecentSale();
+        displayRecentSale(props);
     }, []);
 
     const [displayRecentSalePrice, setDisplayRecentSalePrice] = useState('');
@@ -20,13 +21,13 @@ const MainPage = () => {
     const [displayRecentSaleMiles, setDisplayRecentSaleMiles] = useState('');
     const [displayRecentSaleVehLoc, setDisplayRecentSaleVehLoc] = useState('');
     
-function displayRecentSale () {
+function displayRecentSale (props) {
 
     fetch(APIURL + EndPoints.car.get, {
         method: "GET",
         headers: new Headers({
             'Content-Type': 'application/json',
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0OTM3MTQ4LCJleHAiOjE2NDUwMjM1NDh9.4JAsoMWmkr1Vlpdb0Nfpb4u8Te5BQGaCByIRI5ymqaU`
+            Authorization: `Bearer ${props.token}`
         })
     }).then (
         (response) => response.json()
