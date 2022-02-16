@@ -14,7 +14,7 @@ import NavBar from './components/Navbar/NavBar';
 // import CarTable from './components/CarTable/CarTable';
 import CarIndex from './components/CarIndex';
 import Auth from './components/Auth';
-
+import LemonLotTitleTopScreen from "../src/assets/LemonLotTitleTopScreen.png"
 
 
 function App() {
@@ -39,6 +39,7 @@ function App() {
 console.log(token === localStorage.getItem('token'))
   return (
     <div>
+      <img src={LemonLotTitleTopScreen} alt="titleLogo" className='titleTop'/>
 
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
@@ -46,7 +47,6 @@ console.log(token === localStorage.getItem('token'))
       </Router>
     </div>
 
-     
 
   );
 }
