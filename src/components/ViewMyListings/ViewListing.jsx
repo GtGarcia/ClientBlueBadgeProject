@@ -34,9 +34,8 @@ const ViewMyListings = (props) => {
            }
        }
 
-    return ( 
+    return (
     <div>
-        
         {mycars.map((myCar) => (<CarRow carss = {myCar}/>))}
         
     </div> );

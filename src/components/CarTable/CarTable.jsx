@@ -43,7 +43,7 @@ return (
                 <th>Number of Doors</th>
                 <th>Miles</th>
                 <th> Where is this located?</th>
-            </tr>
+            </tr> 
         </thead>
         <tbody>
 

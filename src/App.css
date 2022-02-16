@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.titleTop {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

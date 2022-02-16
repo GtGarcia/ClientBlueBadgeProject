@@ -47,8 +47,6 @@ function displayRecentSale (props) {
         setDisplayRecentSaleNumberDoors(recentSale.numberOfDoors);
         setDisplayRecentSaleMiles(recentSale.miles);
         setDisplayRecentSaleVehLoc(recentSale.vehicleLocation);
-
-        // setDisplayRecentSale(recentSale);
     }) .catch((err) => console.log(err))
 }
 
@@ -67,9 +65,14 @@ function displayRecentSale (props) {
                         <h4>Most recent Sale!</h4>
                     </div>
 
-                    <p>
-                        {displayRecentSalePrice} {displayRecentSaleCondition} {displayRecentSaleTransmissionType} {displayRecentSaleColor} {displayRecentSaleType} {displayRecentSaleNumberDoors} {displayRecentSaleMiles} {displayRecentSaleVehLoc}
-                    </p>
+                    <p>{displayRecentSalePrice}</p>
+                    <p>{displayRecentSaleCondition}</p>
+                    <p>{displayRecentSaleTransmissionType}</p>
+                    <p>{displayRecentSaleColor}</p>
+                    <p>{displayRecentSaleType}</p>
+                    <p>{displayRecentSaleNumberDoors}</p>
+                    <p>{displayRecentSaleMiles}</p>
+                    <p>{displayRecentSaleVehLoc}</p>
                 </div>
         </div>
      );

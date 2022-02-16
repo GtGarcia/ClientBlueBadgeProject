@@ -15,11 +15,10 @@ const CreateListing = (props) => {
     const [display, setDisplay] = useState();
 
     const handleSubmit = (e) => {
+
     e.preventDefault();
     const newCar = {
-        // car: 
-        
-
+       
             price: price,
             condition: condition,
             transmissionType: transmissionType,
