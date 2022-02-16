@@ -46,8 +46,6 @@ function displayRecentSale () {
         setDisplayRecentSaleNumberDoors(recentSale.numberOfDoors);
         setDisplayRecentSaleMiles(recentSale.miles);
         setDisplayRecentSaleVehLoc(recentSale.vehicleLocation);
-
-        // setDisplayRecentSale(recentSale);
     }) .catch((err) => console.log(err))
 }
 
