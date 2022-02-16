@@ -4,7 +4,7 @@ import {Form, FormGroup, Label, Input, Button,FormText} from "reactstrap";
 import { APIURL,EndPoints } from "../endpoints";
 import { useEffect,useState } from "react";
 import CarIndex from "../CarIndex";
-import CarTable from "../CarTable/CarTable";
+// import CarTable from "../CarTable/CarTable";
 import Auth from "../Auth";
 
 const AllListings = (props) => {

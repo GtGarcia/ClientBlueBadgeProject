@@ -27,11 +27,10 @@ const ViewMyListings = (props) => {
             }).catch((err) => console.log(err))
         }
 
-    return ( 
+    return (
     <div>
         <p>Hello from view my listings!</p>
         <button type='button' onClick = {fetchFunction}>Click me</button>
-
 
         <Link to ='/'>Go Back Home</Link>
     </div> );

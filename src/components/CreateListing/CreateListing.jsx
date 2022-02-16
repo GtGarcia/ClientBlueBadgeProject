@@ -14,22 +14,24 @@ const CreateListing = (props) => {
     const [vehicleLocation, setVehicleLocation] = useState();
     const [display, setDisplay] = useState();
 
+    // console.log(`line 17 ${props.token}`)
     const handleSubmit = (e) => {
-    e.preventDefault();
-    const newCar = {
-        car: { 
-            price: price,
-            condition: condition,
-            transmissionType: transmissionType,
-            color: color,
-            type: type,
-            numberOfDoors: numberOfDoors,
-            miles: miles,
-            vehicleLocation: vehicleLocation
+        e.preventDefault();
+        const newCar = {
+            car: { 
+                price: price,
+                condition: condition,
+                transmissionType: transmissionType,
+                color: color,
+                type: type,
+                numberOfDoors: numberOfDoors,
+                miles: miles,
+                vehicleLocation: vehicleLocation
+            }
         }
-    }
-    console.log(newCar);
-
+        console.log(newCar);
+        // console.log(`line 33 ${props.token}`)
+    
         console.log("submitted")
         fetch(APIURL + EndPoints.car.create, {
             method: 'POST',

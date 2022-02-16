@@ -4,18 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MainPage.css"
 import { APIURL, EndPoints } from '../endpoints';
 
-import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button,
-    h1
-} from "reactstrap";
-
 let recentSale;
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Form,FormGroup,Label,Input,Button,FormText} from "reactstrap";
 
 const MainPage = () => {
     useEffect(() => {
@@ -77,9 +66,14 @@ function displayRecentSale () {
                         <h4>Most recent Sale!</h4>
                     </div>
 
-                    <p>
-                        {displayRecentSalePrice} {displayRecentSaleCondition} {displayRecentSaleTransmissionType} {displayRecentSaleColor} {displayRecentSaleType} {displayRecentSaleNumberDoors} {displayRecentSaleMiles} {displayRecentSaleVehLoc}
-                    </p>
+                    <p>{displayRecentSalePrice}</p>
+                    <p>{displayRecentSaleCondition}</p>
+                    <p>{displayRecentSaleTransmissionType}</p>
+                    <p>{displayRecentSaleColor}</p>
+                    <p>{displayRecentSaleType}</p>
+                    <p>{displayRecentSaleNumberDoors}</p>
+                    <p>{displayRecentSaleMiles}</p>
+                    <p>{displayRecentSaleVehLoc}</p>
                 </div>
         </div>
      );
