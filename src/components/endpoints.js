@@ -14,4 +14,4 @@ export const EndPoints = {
     }
 }
 
-export const APIURL = 'https://gw-lemon-lot-server.herokuapp.com/'
+export const APIURL = 'https://gw-lemon-lot-server.herokuapp.com'
