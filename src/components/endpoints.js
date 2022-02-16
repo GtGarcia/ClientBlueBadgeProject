@@ -9,7 +9,7 @@ export const EndPoints = {
         get: "/car/",
         
         seeAll: '/car/',
-        seeMy: '/car/:id'
+        seeMy: '/car/mine'
 
     }
 }

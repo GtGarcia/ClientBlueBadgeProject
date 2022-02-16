@@ -4,22 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MainPage.css"
 import { APIURL, EndPoints } from '../endpoints';
 
-import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button,
-    h1
-} from "reactstrap";
-
 let recentSale;
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {Form,FormGroup,Label,Input,Button,FormText} from "reactstrap";
 
-const MainPage = () => {
+
+const MainPage = (props) => {
     useEffect(() => {
-        displayRecentSale();
+        displayRecentSale(props);
     }, []);
 
     const [displayRecentSalePrice, setDisplayRecentSalePrice] = useState('');
@@ -31,13 +21,13 @@ const MainPage = () => {
     const [displayRecentSaleMiles, setDisplayRecentSaleMiles] = useState('');
     const [displayRecentSaleVehLoc, setDisplayRecentSaleVehLoc] = useState('');
     
-function displayRecentSale () {
+function displayRecentSale (props) {
 
     fetch(APIURL + EndPoints.car.get, {
         method: "GET",
         headers: new Headers({
             'Content-Type': 'application/json',
-            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjQ0OTM3MTQ4LCJleHAiOjE2NDUwMjM1NDh9.4JAsoMWmkr1Vlpdb0Nfpb4u8Te5BQGaCByIRI5ymqaU`
+            Authorization: `Bearer ${props.token}`
         })
     }).then (
         (response) => response.json()

@@ -17,7 +17,9 @@ const CreateListing = (props) => {
     const handleSubmit = (e) => {
     e.preventDefault();
     const newCar = {
-        car: { 
+        // car: 
+        
+
             price: price,
             condition: condition,
             transmissionType: transmissionType,
@@ -26,7 +28,7 @@ const CreateListing = (props) => {
             numberOfDoors: numberOfDoors,
             miles: miles,
             vehicleLocation: vehicleLocation
-        }
+        
     }
     console.log(newCar);
 

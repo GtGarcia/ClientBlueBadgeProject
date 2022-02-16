@@ -35,10 +35,10 @@ const Navbar = (props) => {
                     <Route path='/' element={<MainPage />}></Route>
                     <Route path='/Login' element={<Login updateLocalStorage={props.updateLocalStorage}/>}></Route>
                     <Route path='/Register' element={<Register updateLocalStorage={props.updateLocalStorage}/>}></Route>
-                    <Route path='/AllListings' element={<AllListings />}></Route>
+                    <Route path='/AllListings' element={<AllListings token={props.token}/>}></Route>
                     <Route path='/UpdateListing' element={<UpdateListing />}></Route>
                     <Route path='/CreateListing' element={<CreateListing token={props.token}/>}></Route>
-                    <Route path='/ViewMyListings' element={<ViewMyListings />}></Route>
+                    <Route path='/ViewMyListings' element={<ViewMyListings token = {props.token}/>}></Route>
                     
                 </Routes>
             </div>

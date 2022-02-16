@@ -17,7 +17,7 @@ import Auth from './components/Auth';
 
 
 
-function App() {
+function App(props) {
   const [token, setToken] = useState("");
 
   const updateLocalStorage = (newToken) => {
@@ -45,7 +45,7 @@ console.log(token === localStorage.getItem('token'))
 
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
-        {token === localStorage.getItem('token') ? (<CarIndex token ={token}/>) : ( <Auth updateLocalStorage = {updateLocalStorage}/>)}
+        {/* {token === localStorage.getItem('token') ? (<CarIndex token ={token}/>) : ( <Auth updateLocalStorage = {updateLocalStorage}/>)} */}
       </Router>
       
     </div>
