@@ -14,4 +14,4 @@ export const EndPoints = {
     }
 }
 
-export const APIURL = 'http://localhost:3000'
+export const APIURL = 'https://gw-lemon-lot-server.herokuapp.com/'
