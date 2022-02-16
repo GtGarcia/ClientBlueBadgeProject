@@ -7,10 +7,10 @@ export const EndPoints = {
         create: '/car/create',
         update: "/car/",
         get: "/car/",
+        delete: "/car/",
         
         seeAll: '/car/',
         seeMy: '/car/:id'
-
     }
 }
 

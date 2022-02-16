@@ -32,6 +32,7 @@ const UpdateListing = (props) => {
     console.log(newCar);
 
         console.log("submitted")
+        
         fetch(APIURL + EndPoints.car.update + id, {
             method: 'PUT',
             body: JSON.stringify(newCar),
