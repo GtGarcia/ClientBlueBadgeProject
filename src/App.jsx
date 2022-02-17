@@ -17,6 +17,7 @@ import Auth from './components/Auth';
 import LemonLotTitleTopScreen from "../src/assets/LemonLotTitleTopScreen.png"
 
 
+
 function App(props) {
   const [token, setToken] = useState("");
 
@@ -38,13 +39,13 @@ function App(props) {
 
 console.log(token === localStorage.getItem('token'))
   return (
-    <div>
+    <div className= 'body'>
       <img src={LemonLotTitleTopScreen} alt="titleLogo" className='titleTop'/>
-
       <Router>
         <NavBar token={token} updateLocalStorage={updateLocalStorage} clearLocalStorage = {clearLocalStorage} />
 
       </Router>
+
     </div>
 
 

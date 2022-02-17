@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Form, FormGroup, Label, Input, Button} from "reactstrap";
 import { APIURL, EndPoints } from '../endpoints';
+import "../CreateListing/create.css";
 
 const CreateListing = (props) => {
     
@@ -52,49 +53,49 @@ const CreateListing = (props) => {
 
     return ( 
         <div> 
-            <h2>Create a New Listing</h2>
+            <h2 id= 'updatePad' className='border'>Create a New Listing</h2>
             <Form>
-                <FormGroup>
+                <FormGroup className = 'border'>
                     <Label htmlFor="Price">Price:</Label>
                     <Input onChange={(e) => setPrice(e.target.value)} type="text" id="Price" name="Price"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="Condition">Condition:</Label>
                     <Input onChange={(e) => setCondition(e.target.value)} type="text" id="condition" name="condition" />
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border' >
                     <Label htmlFor="transmissionType">Transmission Type:</Label>
                     <Input onChange={(e) => setTransmissionType(e.target.value)} type="text" id="transmissionType" name="transmissionType"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="color">Color:</Label>
                     <Input onChange={(e) => setColor(e.target.value)} type="text" id="color" name="color"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="type">Type:</Label>
                     <Input onChange={(e) => setType(e.target.value)} type="text" id="type" name="type"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="numberOfDoors">Number of doors:</Label>
                     <Input onChange={(e) => setNumberOfDoors(e.target.value)} type="text" id="numberOfDoors" name="numberOfDoors"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="miles">Miles:</Label>
                     <Input onChange={(e) => setMiles(e.target.value)} type="text" id="miles" name="miles"/>
                 </FormGroup>
                 <br />
-                <FormGroup>
+                <FormGroup className='border'>
                     <Label htmlFor="vehicleLocation">Vehicle location:</Label>
                     <Input onChange={(e) => setVehicleLocation(e.target.value)} type="text" id="vehicleLocation" name="vehicleLocation"/>
                 </FormGroup>
                 <br />
-                <Button type="submit" onClick={handleSubmit} id="submit"></Button>
+                <Button type="submit" onClick={handleSubmit} id="submit" className= 'button'> Create</Button>
             </Form>
 
             <p>{display}</p>

@@ -51,7 +51,7 @@ const Register = (props) => {
 
 
     return ( 
-        <div>
+        <div className= 'border'>
             <Form onSubmit = {handleSubmit}>
                 <FormGroup>
                     <Label for ='FirstName'>
@@ -155,12 +155,10 @@ const Register = (props) => {
                     />
                 </FormGroup>
 
-                    <Button type = 'submit' >SignUp</Button>
+                    <Button type = 'submit' className= 'button'>SignUp</Button>
 
             </Form>
-        <nav>
-            <Link to ='/'>Go Back Home</Link>
-            </nav>
+        
         </div>
 
         //TODO MiddleName, UserName, email, password , pfpurl, phonenumber

@@ -7,6 +7,7 @@ import CarIndex from "../CarIndex";
 // import CarTable from "../CarTable/CarTable";
 import Auth from "../Auth";
 import CarRow from "../CarTable/CarRow/CarRow";
+import { Table, thead,  } from "react-bootstrap";
 
 
 const AllListings = (props) => {
@@ -37,10 +38,10 @@ const AllListings = (props) => {
     }
     
     
-    return ( <div>
+    return ( <div >
         
             {/* {cars.map((car=> car.price))} */}
-
+          
 
               {cars.map((car) =>(<CarRow carss = {car}/>))} 
             

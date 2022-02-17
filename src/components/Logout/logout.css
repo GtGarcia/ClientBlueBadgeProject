@@ -1,3 +1,35 @@
 #logout {
-    height: 70px
+    height: 70px;
+    padding-left: 10%;
 }
+
+#logout:hover{
+    cursor: pointer;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;    
+  }
+
+  a:hover{
+      color:purple;
+  }
+
+  .navBarColor {
+      background-color: lightcoral;
+      width: 100vh;
+      
+  }
+
+  .navBar {
+      font-size: 30px;
+  }
+
+
+  
+  
+

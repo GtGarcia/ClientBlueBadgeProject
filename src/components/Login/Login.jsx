@@ -37,7 +37,7 @@ const Login = (props) => {
 
     return ( 
         
-<div>
+<div className = 'border'>
             <Form onSubmit = {handleSubmit}>
                 <FormGroup>
                     <Label for = 'Email'>
@@ -65,7 +65,7 @@ const Login = (props) => {
                         onChange = {(e) => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Button type = 'submit' >
+                <Button type = 'submit'  className= 'button'>
                     Login
                 </Button>
             </Form>
@@ -73,7 +73,7 @@ const Login = (props) => {
                     <Route path = '/' element ={<Home/>}/>
                 </Routes> */}
                 <nav>
-                    <Link to ='/'>Go Back Home</Link>
+                    
                     </nav>
 </div>        
      );
